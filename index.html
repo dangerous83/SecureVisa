@@ -1,17 +1,879 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/brand/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="SecureVisa — visa processing secured end to end. Unified applications, document verification, and compliance on one encrypted platform."
-    />
-    <title>SecureVisa — Visa processing, secured end to end</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#060A17" />
+  <link rel="icon" type="image/png" href="asset/Fav-01.png" />
+
+  <!-- Primary SEO -->
+  <title>UAE Licensing &amp; Compliance Experts | VARA, SCA, DFSA, ADGM | SecureVisa Group</title>
+  <meta name="description" content="SecureVisa Group helps crypto, fintech, Web3, tokenization, forex, gaming, and financial services companies secure UAE licensing and build audit-ready compliance across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.securevisanow.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SecureVisa Group" />
+  <meta property="og:title" content="UAE Licensing &amp; Compliance Experts | VARA, SCA, DFSA, ADGM" />
+  <meta property="og:description" content="Audit-ready UAE regulatory licensing and compliance across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE for crypto, fintech, Web3, forex, and gaming businesses." />
+  <meta property="og:url" content="https://www.securevisanow.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Organization + LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "LegalService", "LocalBusiness"],
+    "name": "SecureVisa Group",
+    "legalName": "SVG Corporate Service Provider LLC",
+    "url": "https://www.securevisanow.com/",
+    "description": "UAE regulatory licensing, compliance, regulatory advisory, cybersecurity, and crypto/Web3 licensing advisory firm supporting VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE pathways.",
+    "areaServed": "AE",
+    "telephone": "+97142572406",
+    "email": "hello@securevisanow.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Onyx Tower 1, The Greens",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "knowsAbout": [
+      "UAE regulatory licensing", "VARA license Dubai", "VASP license Dubai",
+      "SCA license UAE", "DFSA license Dubai", "ADGM FSRA licensing",
+      "CBUAE payment services license", "fintech license UAE",
+      "AML KYC compliance UAE", "UAE cybersecurity compliance",
+      "tokenization license UAE", "forex license UAE", "gaming license UAE"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+97185179303",
+      "contactType": "customer support",
+      "contactOption": "TollFree",
+      "areaServed": "AE",
+      "availableLanguage": ["en", "ar"]
+    }
+  }
+  </script>
+
+  <!-- Service schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "UAE Regulatory Licensing & Compliance Advisory",
+    "provider": { "@type": "Organization", "name": "SecureVisa Group" },
+    "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Licensing & Compliance Pathways",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Crypto & Web3 Licensing (VARA)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "FinTech & Payments Licensing (CBUAE / DFSA / ADGM)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tokenization & RWA (SCA)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Forex & Brokerage Licensing (SCA)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gaming | NFT Compliance (GCGRA)" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.securevisanow.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Regulators", "item": "https://www.securevisanow.com/#regulators" },
+      { "@type": "ListItem", "position": 3, "name": "Industries", "item": "https://www.securevisanow.com/#industries" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Which UAE regulator do I need for a crypto or Web3 business?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your activity and location. Virtual asset services in mainland Dubai are typically regulated by VARA, while ADGM (FSRA) and DIFC (DFSA) regulate virtual assets within their financial free zones. SecureVisa helps map your business model to the correct regulator before you apply." } },
+      { "@type": "Question", "name": "What is a VARA license in Dubai?", "acceptedAnswer": { "@type": "Answer", "text": "A VARA license authorises regulated virtual asset activities — such as exchange, broker-dealer, custody, lending, and advisory services — under the Dubai Virtual Assets Regulatory Authority. SecureVisa supports applicants in preparing regulator-ready documentation for the relevant VARA activity." } },
+      { "@type": "Question", "name": "Does a fintech company need SCA, DFSA, ADGM, or CBUAE approval?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the activity. Payments, stored value, and remittance generally fall under CBUAE, capital-markets and tokenized-asset activity under SCA, and financial services inside the free zones under DFSA (DIFC) or FSRA (ADGM). SecureVisa helps determine the right pathway." } },
+      { "@type": "Question", "name": "What documents are required for UAE regulatory licensing?", "acceptedAnswer": { "@type": "Answer", "text": "Requirements vary by regulator and activity but commonly include a business plan, governance and ownership structure, AML/CFT policies, risk and compliance frameworks, fit-and-proper documentation, and cybersecurity controls. SecureVisa helps prepare an audit-ready application dossier." } },
+      { "@type": "Question", "name": "How does cybersecurity affect licensing approval?", "acceptedAnswer": { "@type": "Answer", "text": "UAE regulators increasingly expect demonstrable cybersecurity governance, controls, and incident-response capability. SecureVisa, supported by ITSEC, helps build a regulator-ready cybersecurity framework aligned to licensing expectations." } },
+      { "@type": "Question", "name": "What is AML/KYC compliance for regulated UAE businesses?", "acceptedAnswer": { "@type": "Answer", "text": "AML/KYC compliance covers customer due diligence, sanctions and PEP screening, transaction monitoring, suspicious-activity reporting, and — for virtual assets — Travel Rule obligations. SecureVisa helps design and document an AML/CFT framework suited to your activity." } },
+      { "@type": "Question", "name": "Can SecureVisa support both licensing and post-license compliance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SecureVisa supports pre-license preparation and ongoing post-license obligations, including governance, reporting, AML/KYC operations, and cybersecurity supervision." } },
+      { "@type": "Question", "name": "How do I start a SecureVisa consultation?", "acceptedAnswer": { "@type": "Answer", "text": "Book a confidential regulatory call or message the team on WhatsApp. SecureVisa will outline likely regulator requirements, expected documentation, and timeline considerations for your business model." } }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ====================== NAVBAR ====================== -->
+<header class="navbar" id="navbar" data-nav>
+  <div class="container-large navbar_inner">
+    <a class="navbar_brand" href="#" aria-label="SecureVisa Group home">
+      <span class="brand_mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="SecureVisa shield mark">
+          <path d="M16 2 4 6v9c0 7.3 4.9 12.6 12 15 7.1-2.4 12-7.7 12-15V6L16 2Z" fill="url(#g1)" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+          <path d="M10.5 16.2l3.6 3.6 7-7.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs><linearGradient id="g1" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#2D6CF6"/><stop offset="1" stop-color="#1E4FD0"/></linearGradient></defs>
+        </svg>
+      </span>
+      <span class="brand_text"><strong>SecureVisa</strong><span>Group</span></span>
+    </a>
+
+    <nav class="navbar_menu" aria-label="Primary">
+      <ul class="navbar_list">
+        <li class="navbar_item has-dropdown">
+          <button class="navbar_link" aria-expanded="false" aria-haspopup="true">Regulators <span class="chev" aria-hidden="true"></span></button>
+          <div class="dropdown" role="menu">
+            <div class="dropdown_grid">
+              <a href="#regulators" role="menuitem"><strong>VARA</strong><span>Virtual Asset Regulatory Authority</span></a>
+              <a href="#regulators" role="menuitem"><strong>SCA</strong><span>Securities &amp; Commodities Authority</span></a>
+              <a href="#regulators" role="menuitem"><strong>DFSA</strong><span>Dubai Financial Services Authority</span></a>
+              <a href="#regulators" role="menuitem"><strong>ADGM</strong><span>Abu Dhabi Global Market</span></a>
+              <a href="#regulators" role="menuitem"><strong>GCGRA</strong><span>General Commercial Gaming Regulatory Authority</span></a>
+              <a href="#regulators" role="menuitem"><strong>CBUAE</strong><span>Central Bank of the UAE</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="navbar_item has-dropdown">
+          <button class="navbar_link" aria-expanded="false" aria-haspopup="true">Services <span class="chev" aria-hidden="true"></span></button>
+          <div class="dropdown" role="menu">
+            <div class="dropdown_col">
+              <a href="#ecosystem" role="menuitem">Ecosystem</a>
+              <a href="#ecosystem" role="menuitem">VARA Ecosystem</a>
+              <a href="#ecosystem" role="menuitem">SCA Ecosystem</a>
+              <a href="#industries" role="menuitem">Real Estate Tokenization</a>
+              <a href="#industries" role="menuitem">FinTech</a>
+              <a href="#industries" role="menuitem">Forex Exchange</a>
+              <a href="#industries" role="menuitem">Crypto &amp; Web3</a>
+              <a href="#industries" role="menuitem">Gaming | NFT</a>
+            </div>
+          </div>
+        </li>
+        <li class="navbar_item has-dropdown">
+          <button class="navbar_link" aria-expanded="false" aria-haspopup="true">Industries <span class="chev" aria-hidden="true"></span></button>
+          <div class="dropdown" role="menu">
+            <div class="dropdown_col">
+              <a href="#industries" role="menuitem">Crypto &amp; Web3 Licensing</a>
+              <a href="#industries" role="menuitem">FinTech Licensing</a>
+              <a href="#industries" role="menuitem">Tokenization &amp; RWA</a>
+              <a href="#industries" role="menuitem">Forex Licensing</a>
+              <a href="#industries" role="menuitem">Web3 &amp; DeFi Licensing</a>
+              <a href="#industries" role="menuitem">Real Estate Tokenization</a>
+            </div>
+          </div>
+        </li>
+        <li class="navbar_item has-dropdown">
+          <button class="navbar_link" aria-expanded="false" aria-haspopup="true">Resources <span class="chev" aria-hidden="true"></span></button>
+          <div class="dropdown" role="menu">
+            <div class="dropdown_col">
+              <a href="#" role="menuitem">About Us</a>
+              <a href="#" role="menuitem">Blog</a>
+              <a href="#case-proof" role="menuitem">Case Studies</a>
+              <a href="#" role="menuitem">Partners</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="navbar_actions">
+      <a class="btn btn-ghost btn-sm" href="#ebook">Download eBook</a>
+      <a class="btn btn-primary btn-sm" href="#final-cta">Contact Us Now</a>
+    </div>
+
+    <button class="navbar_burger" aria-label="Open menu" aria-expanded="false" data-burger>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu panel -->
+<div class="mobile-menu" data-mobile-menu hidden>
+  <nav aria-label="Mobile">
+    <details><summary>Regulators</summary>
+      <a href="#regulators">VARA — Virtual Asset Regulatory Authority</a>
+      <a href="#regulators">SCA — Securities &amp; Commodities Authority</a>
+      <a href="#regulators">DFSA — Dubai Financial Services Authority</a>
+      <a href="#regulators">ADGM — Abu Dhabi Global Market</a>
+      <a href="#regulators">GCGRA — General Commercial Gaming Regulatory Authority</a>
+      <a href="#regulators">CBUAE — Central Bank of the UAE</a>
+    </details>
+    <details><summary>Services</summary>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#ecosystem">VARA Ecosystem</a>
+      <a href="#ecosystem">SCA Ecosystem</a>
+      <a href="#industries">Real Estate Tokenization</a>
+      <a href="#industries">FinTech</a>
+      <a href="#industries">Forex Exchange</a>
+      <a href="#industries">Crypto &amp; Web3</a>
+      <a href="#industries">Gaming | NFT</a>
+    </details>
+    <details><summary>Industries</summary>
+      <a href="#industries">Crypto &amp; Web3 Licensing</a>
+      <a href="#industries">FinTech Licensing</a>
+      <a href="#industries">Tokenization &amp; RWA</a>
+      <a href="#industries">Forex Licensing</a>
+      <a href="#industries">Web3 &amp; DeFi Licensing</a>
+      <a href="#industries">Real Estate Tokenization</a>
+    </details>
+    <details><summary>Resources</summary>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#case-proof">Case Studies</a>
+      <a href="#">Partners</a>
+    </details>
+    <div class="mobile-menu_cta">
+      <a class="btn btn-primary" href="#final-cta">Book a Regulatory Call</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/971585179303">WhatsApp / Talk to an Expert</a>
+    </div>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ====================== HERO ====================== -->
+  <section class="section_home-hero" id="home-hero">
+    <div class="hero_bg" aria-hidden="true">
+      <div class="hero_grid"></div>
+      <div class="hero_scan"></div>
+    </div>
+    <div class="container-large">
+      <div class="home-hero_grid">
+
+        <!-- Left: copy -->
+        <div class="hero_copy">
+          <span class="badge"><span class="badge_dot"></span>UAE Regulatory Licensing · Compliance · Cybersecurity</span>
+          <h1>Secure UAE Licensing, Compliance &amp; Cybersecurity Across Every Major Regulator</h1>
+          <p class="hero_sub">SecureVisa Group helps crypto, fintech, Web3, tokenization, forex, gaming, and financial services companies navigate VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE requirements with audit-ready documentation, compliance technology, and cybersecurity assurance.</p>
+
+          <div class="hero_actions">
+            <a class="btn btn-primary btn-lg" href="#final-cta">Book a Regulatory Call</a>
+            <a class="btn btn-whatsapp btn-lg" href="https://wa.me/971585179303" rel="nofollow">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2 .8.5 1.1.6 1.4.4l.6-.7c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>
+              Talk to an Expert on WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero_trust" aria-label="Trust signals">
+            <li><strong>20+</strong><span>Years professional services</span></li>
+            <li><strong>15,000+</strong><span>Enterprises serviced</span></li>
+            <li><strong>6</strong><span>UAE regulatory authorities covered</span></li>
+          </ul>
+          <p class="hero_capline">Licensing · AML/KYC · Cybersecurity · Audit Readiness</p>
+        </div>
+
+        <!-- Right: Regulatory Command Center -->
+        <div class="compliance-dashboard" role="img" aria-label="Regulatory Command Center interface showing regulator status for VARA, SCA, DFSA, ADGM, GCGRA and CBUAE, license pathway progress, an audit readiness score of 92 percent, AML and KYC controls, cybersecurity assurance by ITSEC, and an evidence vault documentation checklist.">
+          <div class="dash_head">
+            <div class="dash_title">
+              <span class="dash_dot live"></span>
+              <span>Regulatory Command Center</span>
+            </div>
+            <span class="dash_mono" data-clock>SYS · LIVE</span>
+          </div>
+
+          <div class="dash_body">
+            <!-- Regulator status grid -->
+            <div class="dash_panel">
+              <div class="dash_panel-head"><span>Regulator status</span><span class="dash_mono">6 / 6 mapped</span></div>
+              <ul class="dash_reg-grid">
+                <li><span class="rg_code">VARA</span><span class="rg_state ok">Active</span></li>
+                <li><span class="rg_code">SCA</span><span class="rg_state ok">Mapped</span></li>
+                <li><span class="rg_code">DFSA</span><span class="rg_state ok">Mapped</span></li>
+                <li><span class="rg_code">ADGM</span><span class="rg_state warn">In review</span></li>
+                <li><span class="rg_code">GCGRA</span><span class="rg_state ok">Mapped</span></li>
+                <li><span class="rg_code">CBUAE</span><span class="rg_state ok">Mapped</span></li>
+              </ul>
+            </div>
+
+            <div class="dash_split">
+              <!-- Audit readiness gauge -->
+              <div class="dash_panel dash_gauge">
+                <div class="dash_panel-head"><span>Audit readiness</span></div>
+                <div class="gauge" data-gauge="92" aria-hidden="true">
+                  <svg viewBox="0 0 120 120" width="118" height="118">
+                    <circle cx="60" cy="60" r="50" class="gauge_track"/>
+                    <circle cx="60" cy="60" r="50" class="gauge_value" data-gauge-ring/>
+                  </svg>
+                  <div class="gauge_num"><strong data-count="92">0</strong><span>%</span></div>
+                </div>
+              </div>
+
+              <!-- License pathway -->
+              <div class="dash_panel dash_path">
+                <div class="dash_panel-head"><span>License pathway</span><span class="dash_mono">VARA · VASP</span></div>
+                <ol class="path_steps">
+                  <li class="done"><span></span>Business model assessment</li>
+                  <li class="done"><span></span>Regulator mapping</li>
+                  <li class="active"><span></span>Compliance gap analysis</li>
+                  <li><span></span>Application dossier</li>
+                </ol>
+                <div class="path_bar"><i data-progress="62"></i></div>
+              </div>
+            </div>
+
+            <div class="dash_split">
+              <!-- AML / KYC controls -->
+              <div class="dash_panel">
+                <div class="dash_panel-head"><span>AML / KYC controls</span></div>
+                <ul class="dash_controls">
+                  <li><span>CDD &amp; screening</span><b class="on">On</b></li>
+                  <li><span>Transaction monitoring</span><b class="on">On</b></li>
+                  <li><span>Travel Rule</span><b class="on">On</b></li>
+                </ul>
+              </div>
+              <!-- Cybersecurity assurance -->
+              <div class="dash_panel">
+                <div class="dash_panel-head"><span>Cybersecurity</span><span class="dash_mono">by ITSEC</span></div>
+                <div class="cyber_row">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 5 5.5V11c0 4.5 3 7.8 7 9 4-1.2 7-4.5 7-9V5.5L12 3Zm-2.2 8.4 1.6 1.6 3-3.2"/></svg>
+                  <div><strong>Assured</strong><span>Controls baseline verified</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evidence vault -->
+            <div class="dash_panel">
+              <div class="dash_panel-head"><span>Evidence vault</span><span class="dash_mono">12 / 14 docs</span></div>
+              <ul class="dash_vault">
+                <li class="ok">AML/CFT policy <span>v3 · signed</span></li>
+                <li class="ok">Governance &amp; ownership <span>verified</span></li>
+                <li class="pending">Cyber incident plan <span>in review</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== LOGO / CREDIBILITY STRIP ====================== -->
+  <section class="section_strip" aria-label="Coverage summary">
+    <div class="container-large strip_inner">
+      <span>Regulatory coverage</span>
+      <ul class="strip_list">
+        <li>VARA</li><li>SCA</li><li>DFSA</li><li>ADGM · FSRA</li><li>GCGRA</li><li>CBUAE</li>
+      </ul>
+      <span class="strip_note">Licensing · AML/KYC · Cybersecurity · Audit Readiness</span>
+    </div>
+  </section>
+
+  <!-- ====================== REGULATORS ====================== -->
+  <section class="section_regulators" id="regulators">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">Regulator coverage matrix</span>
+        <h2>UAE Regulatory Authorities We Cover</h2>
+        <p>Select an authority to review its mandate, who it applies to, and the licensing activities SecureVisa supports. We help map your business model to the right regulator before any application begins.</p>
+      </header>
+
+      <div class="reg_tabs" data-tabs>
+        <div class="reg_tablist" role="tablist" aria-label="UAE regulators">
+          <button class="reg_tab is-active" role="tab" aria-selected="true" data-tab="vara"><strong>VARA</strong><span>Virtual assets</span></button>
+          <button class="reg_tab" role="tab" aria-selected="false" data-tab="sca"><strong>SCA</strong><span>Securities</span></button>
+          <button class="reg_tab" role="tab" aria-selected="false" data-tab="dfsa"><strong>DFSA</strong><span>DIFC</span></button>
+          <button class="reg_tab" role="tab" aria-selected="false" data-tab="adgm"><strong>ADGM</strong><span>FSRA</span></button>
+          <button class="reg_tab" role="tab" aria-selected="false" data-tab="gcgra"><strong>GCGRA</strong><span>Gaming</span></button>
+          <button class="reg_tab" role="tab" aria-selected="false" data-tab="cbuae"><strong>CBUAE</strong><span>Central Bank</span></button>
+        </div>
+
+        <div class="reg_panels">
+          <article class="regulator-card is-active" role="tabpanel" data-panel="vara">
+            <div class="reg_card-main">
+              <span class="reg_pill">Virtual Asset Regulatory Authority</span>
+              <h3>VARA — Dubai virtual asset licensing</h3>
+              <p>Dubai's dedicated virtual assets regulator. The authority for VASPs operating in mainland Dubai, covering the full lifecycle of regulated virtual asset activity.</p>
+              <ul class="reg_chips">
+                <li>VASPs</li><li>Crypto exchanges</li><li>Broker-dealers</li><li>Custody</li><li>Token issuance</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>Activity classification &amp; regulator mapping</li>
+                <li>Regulator-ready application dossier</li>
+                <li>AML/CFT &amp; Travel Rule framework</li>
+                <li>Cybersecurity controls baseline</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore the crypto pathway →</a>
+            </div>
+          </article>
+
+          <article class="regulator-card" role="tabpanel" data-panel="sca" hidden>
+            <div class="reg_card-main">
+              <span class="reg_pill">Securities &amp; Commodities Authority</span>
+              <h3>SCA — securities, commodities &amp; tokenized assets</h3>
+              <p>The federal regulator for capital markets activity in the UAE, including the growing area of tokenized assets and investment services.</p>
+              <ul class="reg_chips">
+                <li>Securities</li><li>Commodities</li><li>Tokenized assets</li><li>Brokerage</li><li>Investment advisory</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>SCA licensing for tokenized assets</li>
+                <li>Brokerage &amp; advisory readiness</li>
+                <li>Governance &amp; risk documentation</li>
+                <li>Ongoing reporting frameworks</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore tokenization &amp; RWA →</a>
+            </div>
+          </article>
+
+          <article class="regulator-card" role="tabpanel" data-panel="dfsa" hidden>
+            <div class="reg_card-main">
+              <span class="reg_pill">Dubai Financial Services Authority</span>
+              <h3>DFSA — regulated financial services in the DIFC</h3>
+              <p>The independent regulator of financial services conducted in the Dubai International Financial Centre free zone.</p>
+              <ul class="reg_chips">
+                <li>DIFC financial services</li><li>Asset management</li><li>FinTech</li><li>Regulated financial activity</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>DIFC pathway assessment</li>
+                <li>Regulatory business plan preparation</li>
+                <li>Compliance &amp; risk policy suite</li>
+                <li>Fit-and-proper documentation</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore fintech licensing →</a>
+            </div>
+          </article>
+
+          <article class="regulator-card" role="tabpanel" data-panel="adgm" hidden>
+            <div class="reg_card-main">
+              <span class="reg_pill">Abu Dhabi Global Market · FSRA</span>
+              <h3>ADGM / FSRA — Abu Dhabi financial services</h3>
+              <p>Abu Dhabi's international financial centre and its Financial Services Regulatory Authority, covering virtual assets, funds, and fintech.</p>
+              <ul class="reg_chips">
+                <li>Financial services</li><li>Virtual assets</li><li>Funds</li><li>FinTech</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>FSRA pathway mapping</li>
+                <li>Virtual asset &amp; fund readiness</li>
+                <li>Compliance gap analysis</li>
+                <li>Cybersecurity &amp; AML alignment</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore Web3 &amp; DeFi →</a>
+            </div>
+          </article>
+
+          <article class="regulator-card" role="tabpanel" data-panel="gcgra" hidden>
+            <div class="reg_card-main">
+              <span class="reg_pill">General Commercial Gaming Regulatory Authority</span>
+              <h3>GCGRA — commercial gaming compliance</h3>
+              <p>The UAE federal authority for regulated commercial gaming, lottery, and internet gaming activity.</p>
+              <ul class="reg_chips">
+                <li>Gaming</li><li>Lottery</li><li>Internet gaming</li><li>Commercial gaming compliance</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>Activity &amp; eligibility assessment</li>
+                <li>Responsible-gaming controls</li>
+                <li>AML/KYC framework design</li>
+                <li>Documentation &amp; governance</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore Gaming | NFT →</a>
+            </div>
+          </article>
+
+          <article class="regulator-card" role="tabpanel" data-panel="cbuae" hidden>
+            <div class="reg_card-main">
+              <span class="reg_pill">Central Bank of the UAE</span>
+              <h3>CBUAE — banking &amp; payment services</h3>
+              <p>The UAE's central bank, regulating banking, payments, stored value, and related financial infrastructure.</p>
+              <ul class="reg_chips">
+                <li>Banking</li><li>Payment services</li><li>Stored value</li><li>Stablecoins</li><li>Exchange &amp; remittance</li>
+              </ul>
+            </div>
+            <div class="reg_card-side">
+              <span class="reg_side-label">SecureVisa supports</span>
+              <ul class="reg_check">
+                <li>Payment services pathway</li>
+                <li>Stored-value &amp; remittance readiness</li>
+                <li>AML/CFT &amp; risk frameworks</li>
+                <li>Operational &amp; cyber controls</li>
+              </ul>
+              <a class="reg_link" href="#industries">Explore fintech &amp; payments →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== ECOSYSTEM ====================== -->
+  <section class="section_ecosystem" id="ecosystem">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">Integrated capability</span>
+        <h2>SecureVisa Group Compliance Ecosystem</h2>
+        <p>Licensing is one milestone. SecureVisa connects regulatory strategy, compliance automation, and cybersecurity assurance into a single, audit-ready operating model.</p>
+      </header>
+
+      <div class="eco_diagram">
+        <div class="eco_core">
+          <span class="eco_core-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="34" height="34"><path d="M16 2 4 6v9c0 7.3 4.9 12.6 12 15 7.1-2.4 12-7.7 12-15V6L16 2Z" fill="rgba(45,108,246,.18)" stroke="#2D6CF6" stroke-width="1.4"/><path d="M10.5 16.2l3.6 3.6 7-7.4" fill="none" stroke="#9cc1ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <strong>SecureVisa Group</strong>
+          <span>Regulatory operating core</span>
+        </div>
+        <ul class="eco_nodes">
+          <li><span class="eco_idx">01</span><strong>Regulatory Strategy &amp; Licensing</strong><span>Activity mapping and regulator-ready applications.</span></li>
+          <li><span class="eco_idx">02</span><strong>Compliance Automation</strong><span>Policy, controls and reporting built to be maintained.</span></li>
+          <li><span class="eco_idx">03</span><strong>Cybersecurity Assurance by ITSEC</strong><span>Regulator-aligned security controls and testing.</span></li>
+          <li><span class="eco_idx">04</span><strong>Digital Identity · KYC · KYB</strong><span>Onboarding, verification and screening workflows.</span></li>
+          <li><span class="eco_idx">05</span><strong>AML/CFT &amp; Travel Rule</strong><span>Risk-based monitoring and reporting support.</span></li>
+          <li><span class="eco_idx">06</span><strong>Audit-Ready Documentation</strong><span>Governance and evidence prepared for review.</span></li>
+        </ul>
+        <p class="eco_partners">Supported by the <strong>ITSEC</strong>, <strong>VerifiX</strong>, and <strong>CompliX</strong> ecosystem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== INDUSTRIES ====================== -->
+  <section class="section_industries" id="industries">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">Industry pathways</span>
+        <h2>Licensing Pathways for Regulated Industries</h2>
+        <p>Built for high-stakes regulated businesses. Each pathway pairs the right regulator with the core compliance work required to reach a credible application.</p>
+      </header>
+
+      <div class="ind_grid">
+        <article class="ind_card">
+          <h3>Crypto &amp; Web3 Licensing</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Exchanges, VASPs, custodians, token issuers.</dd></div>
+            <div><dt>Main regulator</dt><dd>VARA · ADGM (FSRA) · DFSA</dd></div>
+            <div><dt>Core requirements</dt><dd>AML/CFT, Travel Rule, custody controls, cybersecurity.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+
+        <article class="ind_card">
+          <h3>FinTech &amp; Payments</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Payment providers, wallets, stored-value platforms.</dd></div>
+            <div><dt>Main regulator</dt><dd>CBUAE · DFSA · ADGM</dd></div>
+            <div><dt>Core requirements</dt><dd>Safeguarding, AML/KYC, governance, operational resilience.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+
+        <article class="ind_card">
+          <h3>Tokenization &amp; RWA</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Real-world asset and tokenized investment platforms.</dd></div>
+            <div><dt>Main regulator</dt><dd>SCA · ADGM · DFSA</dd></div>
+            <div><dt>Core requirements</dt><dd>Asset structuring, disclosures, investor protection, custody.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+
+        <article class="ind_card">
+          <h3>Forex &amp; Brokerage</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Forex, CFD and brokerage operators.</dd></div>
+            <div><dt>Main regulator</dt><dd>SCA · DFSA · ADGM</dd></div>
+            <div><dt>Core requirements</dt><dd>Capital adequacy, client money, conduct, AML/KYC.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+
+        <article class="ind_card">
+          <h3>Gaming | NFT</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Commercial &amp; internet gaming and NFT platforms.</dd></div>
+            <div><dt>Main regulator</dt><dd>GCGRA · VARA</dd></div>
+            <div><dt>Core requirements</dt><dd>Responsible gaming, AML/KYC, integrity controls.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+
+        <article class="ind_card">
+          <h3>Real Estate Tokenization</h3>
+          <dl>
+            <div><dt>Who it's for</dt><dd>Property tokenization and fractional-ownership platforms.</dd></div>
+            <div><dt>Main regulator</dt><dd>SCA · VARA · DFSA</dd></div>
+            <div><dt>Core requirements</dt><dd>Asset backing, disclosures, custody, investor safeguards.</dd></div>
+          </dl>
+          <a class="ind_cta" href="#final-cta">Explore pathway →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== PROCESS ====================== -->
+  <section class="section_process" id="process">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">Advisory methodology</span>
+        <h2>From Business Model to Regulator Approval</h2>
+        <p>A structured pathway that turns a business model into a regulator-ready application — and keeps it compliant after approval.</p>
+      </header>
+
+      <ol class="process_timeline">
+        <li class="proc_step">
+          <span class="proc_num">01</span>
+          <h3>Business Model Assessment</h3>
+          <p>We examine your activities, jurisdiction, and structure to define what is actually being regulated.</p>
+        </li>
+        <li class="proc_step">
+          <span class="proc_num">02</span>
+          <h3>Regulator Mapping</h3>
+          <p>Your model is mapped to the correct UAE authority — VARA, SCA, DFSA, ADGM, GCGRA, or CBUAE.</p>
+        </li>
+        <li class="proc_step">
+          <span class="proc_num">03</span>
+          <h3>Compliance Gap Analysis</h3>
+          <p>We benchmark current readiness against regulator expectations and prioritise the gaps that matter.</p>
+        </li>
+        <li class="proc_step">
+          <span class="proc_num">04</span>
+          <h3>Application Dossier &amp; Policies</h3>
+          <p>We help prepare audit-ready documentation: business plan, governance, AML/CFT, and risk policies.</p>
+        </li>
+        <li class="proc_step">
+          <span class="proc_num">05</span>
+          <h3>Submission &amp; Regulator Response</h3>
+          <p>We support the submission and help respond to regulator queries with clear, consistent evidence.</p>
+        </li>
+        <li class="proc_step">
+          <span class="proc_num">06</span>
+          <h3>Cybersecurity, AML/KYC &amp; Ongoing Supervision</h3>
+          <p>Post-license, we support security controls, monitoring, reporting, and ongoing obligations.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ====================== WHY ====================== -->
+  <section class="section_why" id="why">
+    <div class="container-large why_grid">
+      <header class="section_head section_head--left">
+        <span class="eyebrow">The SecureVisa difference</span>
+        <h2>Why SecureVisa Group</h2>
+        <p>A multi-regulator advisory firm with a compliance-technology and cybersecurity backbone — built for companies that cannot afford to get regulation wrong.</p>
+        <a class="btn btn-primary" href="#final-cta">Book a Regulatory Call</a>
+      </header>
+      <ul class="why_list">
+        <li><h3>Multi-regulator UAE expertise</h3><p>One team across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE pathways.</p></li>
+        <li><h3>Compliance technology + cybersecurity backbone</h3><p>Advisory reinforced by automation and security capability.</p></li>
+        <li><h3>Audit-ready documentation</h3><p>Evidence and governance prepared to withstand regulator review.</p></li>
+        <li><h3>Pre-license and post-license support</h3><p>From first assessment through ongoing supervision.</p></li>
+        <li><h3>Built for serious regulated companies</h3><p>Executive-grade engagement, not template consulting.</p></li>
+        <li><h3>Supported by ITSEC, VerifiX &amp; CompliX</h3><p>An integrated ecosystem behind every engagement.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== CASE PROOF ====================== -->
+  <section class="section_case-proof" id="case-proof">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">From licensing to launch</span>
+        <h2>Project-type outcomes</h2>
+        <p>Illustrative, anonymized examples of the engagement types SecureVisa supports. These are project-type examples, not client testimonials, and do not imply guaranteed regulatory outcomes.</p>
+      </header>
+
+      <div class="case_grid">
+        <article class="case_card">
+          <span class="case_tag">Anonymized example · Crypto exchange</span>
+          <h3>Crypto exchange readiness pathway</h3>
+          <p>Activity classification, AML/CFT and Travel Rule framework, and a structured application dossier prepared for a virtual asset exchange model.</p>
+          <ul class="case_meta"><li>VARA</li><li>AML/CFT</li><li>Custody controls</li></ul>
+        </article>
+        <article class="case_card">
+          <span class="case_tag">Anonymized example · Tokenization</span>
+          <h3>Tokenized asset project</h3>
+          <p>Structuring support and disclosure documentation aligned to capital-markets expectations for a tokenized investment platform.</p>
+          <ul class="case_meta"><li>SCA</li><li>Disclosures</li><li>Investor protection</li></ul>
+        </article>
+        <article class="case_card">
+          <span class="case_tag">Anonymized example · FinTech</span>
+          <h3>FinTech payment service provider</h3>
+          <p>Safeguarding, governance, and AML/KYC framework preparation for a payments business assessing its UAE pathway.</p>
+          <ul class="case_meta"><li>CBUAE</li><li>Safeguarding</li><li>KYC/KYB</li></ul>
+        </article>
+        <article class="case_card">
+          <span class="case_tag">Anonymized example · Forex</span>
+          <h3>Forex brokerage licensing strategy</h3>
+          <p>Regulator mapping and readiness planning, including conduct and client-money considerations for a brokerage operator.</p>
+          <ul class="case_meta"><li>SCA</li><li>Client money</li><li>Conduct</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== EBOOK ====================== -->
+  <section class="section_ebook" id="ebook">
+    <div class="container-large ebook_grid">
+      <div class="ebook_copy">
+        <span class="eyebrow">Free resource</span>
+        <h2>VARA License Setup Guide</h2>
+        <p>A practical, regulator-aware guide to preparing for virtual asset licensing in Dubai.</p>
+        <ul class="ebook_list">
+          <li>Complete UAE compliance framework overview</li>
+          <li>VARA licensing pathway, step by step</li>
+          <li>AML/KYC checklist</li>
+          <li>Cybersecurity readiness essentials</li>
+          <li>Audit-proof documentation guidance</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="#final-cta">Download eBook</a>
+      </div>
+      <div class="ebook_visual" aria-hidden="true">
+        <div class="ebook_doc">
+          <div class="ebook_doc-head"><span class="ebook_badge">VARA</span><span class="dash_mono">Setup Guide</span></div>
+          <div class="ebook_lines"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="ebook_check"><span></span>AML/KYC checklist</div>
+          <div class="ebook_check"><span></span>Cybersecurity readiness</div>
+          <div class="ebook_check"><span></span>Documentation index</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FAQ ====================== -->
+  <section class="section_faq" id="faq">
+    <div class="container-large">
+      <header class="section_head">
+        <span class="eyebrow">Questions, answered</span>
+        <h2>UAE Licensing &amp; Compliance FAQs</h2>
+      </header>
+      <div class="faq_list" data-faq>
+        <details class="faq_item"><summary>Which UAE regulator do I need for a crypto or Web3 business?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>It depends on your activity and location. Virtual asset services in mainland Dubai are typically regulated by VARA, while ADGM (FSRA) and DIFC (DFSA) regulate virtual assets within their financial free zones. SecureVisa helps map your business model to the correct regulator before you apply.</p></div></details>
+        <details class="faq_item"><summary>What is a VARA license in Dubai?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>A VARA license authorises regulated virtual asset activities — such as exchange, broker-dealer, custody, lending, and advisory services — under the Dubai Virtual Assets Regulatory Authority. SecureVisa supports applicants in preparing regulator-ready documentation for the relevant VARA activity.</p></div></details>
+        <details class="faq_item"><summary>Does a fintech company need SCA, DFSA, ADGM, or CBUAE approval?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>It depends on the activity. Payments, stored value, and remittance generally fall under CBUAE; capital-markets and tokenized-asset activity under SCA; and financial services inside the free zones under DFSA (DIFC) or FSRA (ADGM). SecureVisa helps determine the right pathway.</p></div></details>
+        <details class="faq_item"><summary>What documents are required for UAE regulatory licensing?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>Requirements vary by regulator and activity but commonly include a business plan, governance and ownership structure, AML/CFT policies, risk and compliance frameworks, fit-and-proper documentation, and cybersecurity controls. SecureVisa helps prepare an audit-ready application dossier.</p></div></details>
+        <details class="faq_item"><summary>How does cybersecurity affect licensing approval?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>UAE regulators increasingly expect demonstrable cybersecurity governance, controls, and incident-response capability. SecureVisa, supported by ITSEC, helps build a regulator-ready cybersecurity framework aligned to licensing expectations.</p></div></details>
+        <details class="faq_item"><summary>What is AML/KYC compliance for regulated UAE businesses?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>AML/KYC compliance covers customer due diligence, sanctions and PEP screening, transaction monitoring, suspicious-activity reporting, and — for virtual assets — Travel Rule obligations. SecureVisa helps design and document an AML/CFT framework suited to your activity.</p></div></details>
+        <details class="faq_item"><summary>Can SecureVisa support both licensing and post-license compliance?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>Yes. SecureVisa supports pre-license preparation and ongoing post-license obligations, including governance, reporting, AML/KYC operations, and cybersecurity supervision.</p></div></details>
+        <details class="faq_item"><summary>How do I start a SecureVisa consultation?<span class="faq_icon" aria-hidden="true"></span></summary><div class="faq_a"><p>Book a confidential regulatory call or message the team on WhatsApp. SecureVisa will outline likely regulator requirements, expected documentation, and timeline considerations for your business model.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FINAL CTA ====================== -->
+  <section class="section_final-cta" id="final-cta">
+    <div class="container-large">
+      <div class="final_panel">
+        <div class="final_grid" aria-hidden="true"></div>
+        <div class="final_content">
+          <span class="eyebrow eyebrow--light">Confidential consultation</span>
+          <h2>Speak with a SecureVisa Compliance Expert</h2>
+          <p>Share your licensing or compliance goals in a confidential session. SecureVisa will outline regulator requirements, expected documentation, timeline considerations, and next steps.</p>
+          <div class="final_actions">
+            <a class="btn btn-primary btn-lg" href="tel:+97142572406">Book a Regulatory Call</a>
+            <a class="btn btn-whatsapp btn-lg" href="https://wa.me/971585179303" rel="nofollow">WhatsApp SecureVisa Support</a>
+          </div>
+          <p class="final_trust">Same-day response · UAE hours · Confidential consultation · No spam</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer_component">
+  <div class="container-large">
+    <div class="footer_top">
+      <div class="footer_brand">
+        <a class="navbar_brand" href="#" aria-label="SecureVisa Group home">
+          <span class="brand_mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="26" height="26"><path d="M16 2 4 6v9c0 7.3 4.9 12.6 12 15 7.1-2.4 12-7.7 12-15V6L16 2Z" fill="url(#g2)" stroke="rgba(255,255,255,.25)" stroke-width="1"/><path d="M10.5 16.2l3.6 3.6 7-7.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g2" x1="4" y1="2" x2="28" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#2D6CF6"/><stop offset="1" stop-color="#1E4FD0"/></linearGradient></defs></svg>
+          </span>
+          <span class="brand_text"><strong>SecureVisa</strong><span>Group</span></span>
+        </a>
+        <p class="footer_tagline">Your trusted partner for regulatory compliance &amp; licensing in the UAE.</p>
+        <ul class="footer_contact">
+          <li><span>Phone</span><a href="tel:+97142572406">+971.4.257.2406</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/971585179303" rel="nofollow">+971.58.517.9303</a></li>
+          <li><span>Email</span><a href="mailto:hello@securevisanow.com">hello@securevisanow.com</a></li>
+          <li><span>Address</span><address>Onyx Tower 1, The Greens, Dubai</address></li>
+        </ul>
+      </div>
+
+      <nav class="footer_links" aria-label="Footer">
+        <div class="footer_col">
+          <h3>Regulators</h3>
+          <a href="#regulators">VARA</a>
+          <a href="#regulators">SCA</a>
+          <a href="#regulators">DFSA</a>
+          <a href="#regulators">ADGM</a>
+          <a href="#regulators">GCGRA</a>
+          <a href="#regulators">CBUAE</a>
+        </div>
+        <div class="footer_col">
+          <h3>Services</h3>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#ecosystem">VARA Ecosystem</a>
+          <a href="#ecosystem">SCA Ecosystem</a>
+          <a href="#industries">Real Estate Tokenization</a>
+          <a href="#industries">FinTech</a>
+          <a href="#industries">Forex Exchange</a>
+          <a href="#industries">Crypto &amp; Web3</a>
+          <a href="#industries">Gaming | NFT</a>
+        </div>
+        <div class="footer_col">
+          <h3>Industries</h3>
+          <a href="#industries">Crypto &amp; Web3 Licensing</a>
+          <a href="#industries">FinTech Licensing</a>
+          <a href="#industries">Tokenization &amp; RWA</a>
+          <a href="#industries">Forex Licensing</a>
+          <a href="#industries">Web3 &amp; DeFi Licensing</a>
+          <a href="#industries">Real Estate Tokenization</a>
+        </div>
+        <div class="footer_col">
+          <h3>Resources</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#case-proof">Case Studies</a>
+          <a href="#">Partners</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer_bottom">
+      <p class="footer_copy">© 2023–2026 SVG Corporate Service Provider LLC | DED: 1217108</p>
+      <nav class="footer_legal" aria-label="Legal">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Legal Disclaimer</a>
+      </nav>
+    </div>
+    <p class="footer_disclaimer">SecureVisa Group is a private corporate service provider and is not a government authority or regulator. SecureVisa supports licensing applications and compliance preparation; it does not guarantee regulatory approval.</p>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/971585179303" rel="nofollow" aria-label="Chat with SecureVisa on WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2 .8.5 1.1.6 1.4.4l.6-.7c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
 </html>
