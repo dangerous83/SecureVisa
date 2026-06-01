@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  SecureVisa design tokens — "Trust & Authority" system.
+  Trust blue primary (#2563EB) + orange CTA accent (#EA580C) on a light slate base.
+*/
+:root {
+  --radius: 0.625rem;
+
+  --background: #f8fafc;
+  --foreground: #1e293b;
+
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+
+  --secondary: #3b82f6;
+  --secondary-foreground: #ffffff;
+
+  --muted: #e9eff8;
+  --muted-foreground: #64748b;
+
+  --accent: #e9eff8;
+  --accent-foreground: #1e293b;
+
+  /* Orange conversion CTA (WCAG-adjusted) */
+  --cta: #ea580c;
+  --cta-foreground: #ffffff;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+}
+
+.dark {
+  --background: #0b1220;
+  --foreground: #e2e8f0;
+
+  --card: #111a2e;
+  --card-foreground: #e2e8f0;
+
+  --popover: #111a2e;
+  --popover-foreground: #e2e8f0;
+
+  --primary: #3b82f6;
+  --primary-foreground: #0b1220;
+
+  --secondary: #1d4ed8;
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  --accent: #1e293b;
+  --accent-foreground: #e2e8f0;
+
+  --cta: #f97316;
+  --cta-foreground: #0b1220;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #0b1220;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in oklab, var(--color-ring) 50%, transparent);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
