@@ -434,3 +434,70 @@ h1,h2,h3 { font-family: var(--font-head); font-weight: 700; line-height: 1.12; l
   .eco_nodes { grid-template-columns: 1fr; } .footer_links { grid-template-columns: 1fr; }
   .footer_bottom { flex-direction: column; align-items: flex-start; } .strip_note { margin-left: 0; width: 100%; }
 }
+
+/* =====================================================================
+   v2 redesign — photographic backdrops, scroll reveal, NEXUS platform,
+   spacing rhythm. Appended so it layers over the base above.
+   ===================================================================== */
+
+/* ---------- Anchored-section offset (sticky nav no longer hides headings) ---------- */
+:where(section, [id]) { scroll-margin-top: 96px; }
+
+/* ---------- A touch more breathing room inside every section ---------- */
+.section_head { margin-bottom: clamp(40px, 4vw, 64px); }
+.section_head p { margin-inline: auto; text-wrap: pretty; }
+.section_head--left p { margin-inline: 0; }
+h1, h2, h3 { text-wrap: balance; }
+.split { gap: clamp(32px, 4vw, 56px); }
+
+/* ---------- Photographic backdrop wash ---------- */
+.media-backdrop { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.media-backdrop img { width: 100%; height: 100%; object-fit: cover; opacity: var(--bg-op, .16); filter: saturate(112%); transform: scale(1.08); transition: transform .6s var(--ease); }
+.media-backdrop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,10,20,.55) 0%, rgba(7,10,20,.78) 100%); }
+/* keep foreground content above the wash */
+.section_home-hero > .container-large,
+.section_subhero > .container-large,
+.section_nexus > .container-large { position: relative; z-index: 1; }
+.final_panel { position: relative; }
+.final_content { position: relative; z-index: 2; }
+.final_panel .media-backdrop::after { background: linear-gradient(180deg, rgba(11,15,28,.35), rgba(11,15,28,.55)); }
+.final_panel .media-backdrop img { mix-blend-mode: soft-light; opacity: .5; }
+
+/* ---------- Scroll reveal ---------- */
+[data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); will-change: opacity, transform; }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce){ [data-reveal]{ opacity: 1 !important; transform: none !important; transition: none !important; } .media-backdrop img{ transform: none !important; } }
+
+/* ---------- Navbar: NEXUS platform link ---------- */
+.navbar_link--platform { color: #fff; }
+.navbar_tag { font-family: var(--font-mono); font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brand-200); background: var(--brand-soft); border: 1px solid rgba(242,106,33,.3); padding: 2px 6px; border-radius: 6px; margin-left: 7px; }
+.navbar_link--platform.is-current { color: var(--brand-400); }
+.mobile-menu_feature { display: flex; align-items: center; justify-content: space-between; padding: 16px 4px; font-family: var(--font-head); font-weight: 600; color: var(--brand-200); border-bottom: 1px solid var(--line); }
+
+/* ---------- NEXUS — homepage section ---------- */
+.section_nexus { position: relative; overflow: hidden; padding: clamp(64px,6vw,120px) 0; background: linear-gradient(180deg, var(--navy-850), var(--navy-900)); border-top: 1px solid var(--line); }
+.section_nexus .accent { color: var(--brand-500); }
+.nexus_modules { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.nexus_modules li { display: flex; flex-direction: column; gap: 9px; padding: 24px; border-radius: var(--r-lg); background: rgba(255,255,255,.025); border: 1px solid var(--line); transition: transform .25s var(--ease), border-color .25s, background .25s; }
+.nexus_modules li:hover { transform: translateY(-4px); border-color: var(--brand-500); background: var(--brand-soft); }
+.nx_code { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .14em; color: var(--blue-400); }
+.nexus_modules strong { font-family: var(--font-head); font-size: 1.06rem; color: #fff; }
+.nx_desc { font-size: .9rem; color: var(--t-400); line-height: 1.55; }
+.nexus_cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: clamp(32px,4vw,48px); }
+
+/* ---------- NEXUS — platform page ---------- */
+.nexus_visual { display: flex; align-items: flex-start; justify-content: center; }
+.nexus_visual .compliance-dashboard { max-width: 480px; width: 100%; }
+.nexus_grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.nx_card { padding: 28px; border-radius: var(--r-lg); background: linear-gradient(180deg, var(--navy-700), var(--navy-800)); border: 1px solid var(--line); border-top: 2px solid var(--brand-500); transition: transform .25s var(--ease), border-color .25s; }
+.nx_card:hover { transform: translateY(-4px); border-top-color: var(--blue-500); }
+.nx_card .nx_code { display: inline-block; margin-bottom: 10px; }
+.nx_card h3 { font-size: 1.12rem; margin-bottom: 8px; }
+.nx_card p { color: var(--t-400); font-size: .92rem; line-height: 1.6; }
+
+@media (max-width: 860px){
+  .nexus_modules, .nexus_grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 620px){
+  .nexus_modules, .nexus_grid { grid-template-columns: 1fr; }
+}

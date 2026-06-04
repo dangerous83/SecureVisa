@@ -154,4 +154,46 @@
       ro.observe(el);
     });
   }
+
+  /* ---------- Class-based reveal for [data-reveal] (heroes, NEXUS, etc.) ---------- */
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    var dro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-visible"); dro.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-reveal]"), function (el) {
+      // stagger siblings that share a parent
+      var sibs = el.parentElement ? el.parentElement.querySelectorAll(":scope > [data-reveal]") : [el];
+      var idx = Array.prototype.indexOf.call(sibs, el);
+      if (idx > 0) el.style.transitionDelay = (Math.min(idx, 6) * 0.07).toFixed(2) + "s";
+      dro.observe(el);
+    });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-reveal]"), function (el) {
+      el.classList.add("is-visible");
+    });
+  }
+
+  /* ---------- Subtle parallax on photographic backdrops ---------- */
+  if (!reduceMotion && window.matchMedia("(min-width: 768px)").matches) {
+    var pxImgs = Array.prototype.slice.call(document.querySelectorAll("[data-parallax] img"));
+    if (pxImgs.length) {
+      var ticking = false;
+      var updatePx = function () {
+        pxImgs.forEach(function (img) {
+          var host = img.parentElement;
+          var r = host.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight) return;
+          var prog = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+          img.style.transform = "scale(1.12) translateY(" + (prog * 22).toFixed(1) + "px)";
+        });
+        ticking = false;
+      };
+      window.addEventListener("scroll", function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(updatePx); }
+      }, { passive: true });
+      updatePx();
+    }
+  }
 })();
