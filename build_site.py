@@ -23,6 +23,7 @@ REGULATORS = [
     ("cbuae", "CBUAE", "Central Bank of the UAE"),
 ]
 SERVICES = [
+    ("nexus.html", "NEXUS Compliance Platform"),
     ("ecosystem.html", "Ecosystem"),
     ("ecosystem.html#vara", "VARA Ecosystem"),
     ("ecosystem.html#sca", "SCA Ecosystem"),
@@ -49,6 +50,14 @@ RESOURCES = [
 
 WA_SVG = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" '
           'd="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2 .8.5 1.1.6 1.4.4l.6-.7c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>')
+
+
+def media_backdrop(src, opacity="0.16", parallax=False):
+    """Decorative low-opacity photographic wash behind a section, with a
+    navy gradient scrim on top so foreground text always stays readable."""
+    px = " data-parallax" if parallax else ""
+    return (f'<div class="media-backdrop" aria-hidden="true"{px} style="--bg-op:{opacity}">'
+            f'<img src="{src}" alt="" loading="lazy" decoding="async" /></div>')
 
 
 def head(title, desc, canonical_path, breadcrumb=None):
@@ -128,6 +137,9 @@ def header(active=""):
 {ind_links}
           </div></div>
         </li>
+        <li class="navbar_item">
+          <a class="navbar_link navbar_link--platform{cur('nexus')}" href="nexus.html">NEXUS <span class="navbar_tag">Platform</span></a>
+        </li>
         <li class="navbar_item has-dropdown">
           <a class="navbar_link{cur('resources')}" href="about.html" aria-haspopup="true">Resources <span class="chev" aria-hidden="true"></span></a>
           <div class="dropdown" role="menu"><div class="dropdown_col">
@@ -146,6 +158,7 @@ def header(active=""):
 
 <div class="mobile-menu" data-mobile-menu hidden>
   <nav aria-label="Mobile">
+    <a class="mobile-menu_feature" href="nexus.html">NEXUS — Compliance Platform</a>
     <details><summary>Regulators</summary>
 {m_reg}
     </details>
@@ -222,8 +235,9 @@ def footer():
 def final_cta():
     return f"""<section class="section_final-cta" id="final-cta">
   <div class="container-large"><div class="final_panel">
+    {media_backdrop("assets/media/data-flow.jpg", opacity="0.18")}
     <div class="final_grid" aria-hidden="true"></div>
-    <div class="final_content">
+    <div class="final_content" data-reveal>
       <span class="eyebrow eyebrow--light">Confidential consultation</span>
       <h2>Speak with a SecureVisa Compliance Expert</h2>
       <p>Share your licensing or compliance goals in a confidential session. SecureVisa will outline regulator requirements, expected documentation, timeline considerations, and next steps.</p>
@@ -237,18 +251,20 @@ def final_cta():
 </section>"""
 
 
-def subhero(pill, h1, sub, crumb, stats, primary=("contact.html", "Book a Regulatory Call")):
+def subhero(pill, h1, sub, crumb, stats, primary=("contact.html", "Book a Regulatory Call"),
+            bg="assets/media/dubai-skyline.jpg"):
     crumb_html = " / ".join(
         (f'<a href="{h}">{html.escape(n)}</a>' if h else f'<span>{html.escape(n)}</span>')
         for h, n in crumb)
     stat_html = "\n".join(
-        f'        <div class="subhero_stat"><strong>{html.escape(s)}</strong><span>{html.escape(l)}</span></div>'
+        f'        <div class="subhero_stat" data-reveal><strong>{html.escape(s)}</strong><span>{html.escape(l)}</span></div>'
         for s, l in stats)
     return f"""<section class="section_subhero">
+  {media_backdrop(bg, opacity="0.20", parallax=True)}
   <div class="container-large">
     <p class="breadcrumb">{crumb_html}</p>
     <div class="subhero_grid">
-      <div class="subhero">
+      <div class="subhero" data-reveal>
         <span class="subhero_pill">{html.escape(pill)}</span>
         <h1>{h1}</h1>
         <p>{html.escape(sub)}</p>
@@ -434,26 +450,11 @@ def faq_block(items, heading="UAE Licensing & Compliance FAQs"):
 # ==========================================================================
 # PAGE BODIES
 # ==========================================================================
-def home_hero():
-    return f"""<section class="section_home-hero" id="home-hero">
-  <div class="hero_bg" aria-hidden="true"><div class="hero_grid"></div></div>
-  <div class="container-large"><div class="home-hero_grid">
-    <div class="hero_copy">
-      <span class="badge"><span class="badge_dot"></span>UAE Regulatory Licensing · Compliance · Cybersecurity</span>
-      <h1>Secure UAE Licensing, Compliance &amp; <span class="accent">Cybersecurity</span> Across Every Major Regulator</h1>
-      <p class="hero_sub">SecureVisa Group helps crypto, fintech, Web3, tokenization, forex, gaming, and financial services companies navigate VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE requirements with audit-ready documentation, compliance technology, and cybersecurity assurance.</p>
-      <div class="hero_actions">
-        <a class="btn btn-primary btn-lg" href="contact.html">Book a Regulatory Call</a>
-        <a class="btn btn-whatsapp btn-lg" href="{WA}" rel="nofollow">{WA_SVG}Talk to an Expert on WhatsApp</a>
-      </div>
-      <ul class="hero_trust" aria-label="Trust signals">
-        <li><strong>20+</strong><span>Years professional services</span></li>
-        <li><strong>15,000+</strong><span>Enterprises serviced</span></li>
-        <li><strong>6</strong><span>UAE regulatory authorities covered</span></li>
-      </ul>
-      <p class="hero_capline">Licensing · AML/KYC · Cybersecurity · Audit Readiness</p>
-    </div>
-    <div class="compliance-dashboard" role="img" aria-label="Regulatory Command Center showing regulator status for VARA, SCA, DFSA, ADGM, GCGRA and CBUAE, license pathway progress, an audit readiness score of 92 percent, AML and KYC controls, cybersecurity assurance by ITSEC, and an evidence vault documentation checklist.">
+def command_center(reveal=False):
+    """The live 'Regulatory Command Center' mockup. Shared by the home hero and
+    the NEXUS platform page so the product visual stays consistent."""
+    rv = " data-reveal" if reveal else ""
+    return f"""<div class="compliance-dashboard"{rv} role="img" aria-label="Regulatory Command Center showing regulator status for VARA, SCA, DFSA, ADGM, GCGRA and CBUAE, license pathway progress, an audit readiness score of 92 percent, AML and KYC controls, cybersecurity assurance by ITSEC, and an evidence vault documentation checklist.">
       <div class="dash_head"><div class="dash_title"><span class="dash_dot live"></span><span>Regulatory Command Center</span></div><span class="dash_mono">SYS · LIVE</span></div>
       <div class="dash_body">
         <div class="dash_panel">
@@ -509,7 +510,41 @@ def home_hero():
           </ul>
         </div>
       </div>
+    </div>"""
+
+
+# NEXUS platform modules (label, mono code, description)
+NEXUS_MODULES = [
+    ("Regulator Mapping Engine", "MAP", "Classify activities and map them to the right UAE authority across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE."),
+    ("License Pathway Tracker", "PATH", "Live milestones from business-model assessment through dossier submission and regulator response."),
+    ("AML/KYC Control Center", "AML", "CDD and sanctions screening, transaction monitoring, and Travel Rule controls in one operational view."),
+    ("Cybersecurity Assurance", "CYBER", "A regulator-aligned controls baseline, testing, and incident readiness, backed by ITSEC."),
+    ("Evidence Vault", "VAULT", "Versioned, audit-ready documents — policies, governance, and approvals — organised for regulator review."),
+    ("Reporting & Supervision", "REPORT", "Ongoing obligations, reporting calendars, and alerts that keep the licence compliant after approval."),
+]
+
+
+def home_hero():
+    return f"""<section class="section_home-hero" id="home-hero">
+  {media_backdrop("assets/media/dubai-skyline.jpg", opacity="0.14", parallax=True)}
+  <div class="hero_bg" aria-hidden="true"><div class="hero_grid"></div></div>
+  <div class="container-large"><div class="home-hero_grid">
+    <div class="hero_copy" data-reveal>
+      <span class="badge"><span class="badge_dot"></span>UAE Regulatory Licensing · Compliance · Cybersecurity</span>
+      <h1>Secure UAE Licensing, Compliance &amp; <span class="accent">Cybersecurity</span> Across Every Major Regulator</h1>
+      <p class="hero_sub">SecureVisa Group helps crypto, fintech, Web3, tokenization, forex, gaming, and financial services companies navigate VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE requirements with audit-ready documentation, compliance technology, and cybersecurity assurance.</p>
+      <div class="hero_actions">
+        <a class="btn btn-primary btn-lg" href="contact.html">Book a Regulatory Call</a>
+        <a class="btn btn-whatsapp btn-lg" href="{WA}" rel="nofollow">{WA_SVG}Talk to an Expert on WhatsApp</a>
+      </div>
+      <ul class="hero_trust" aria-label="Trust signals">
+        <li><strong>20+</strong><span>Years professional services</span></li>
+        <li><strong>15,000+</strong><span>Enterprises serviced</span></li>
+        <li><strong>6</strong><span>UAE regulatory authorities covered</span></li>
+      </ul>
+      <p class="hero_capline">Licensing · AML/KYC · Cybersecurity · Audit Readiness</p>
     </div>
+    {command_center(reveal=True)}
   </div></div>
 </section>
 
@@ -694,6 +729,78 @@ def ebook_section():
 </section>"""
 
 
+def home_nexus():
+    mods = "\n        ".join(
+        f'<li data-reveal><span class="nx_code">{c}</span><strong>{html.escape(t)}</strong><span class="nx_desc">{html.escape(d)}</span></li>'
+        for t, c, d in NEXUS_MODULES)
+    return f"""<section class="section_nexus" id="nexus">
+  {media_backdrop("assets/media/network-nodes.jpg", opacity="0.10", parallax=True)}
+  <div class="container-large">
+    <header class="section_head"><span class="eyebrow">Introducing the platform</span>
+      <h2>SecureVisa <span class="accent">NEXUS</span> — one platform for the whole compliance lifecycle</h2>
+      <p>NEXUS turns the regulatory command center into your operating model: regulator mapping, licence tracking, AML/KYC, cybersecurity, and audit-ready evidence in a single supervised view.</p></header>
+    <ul class="nexus_modules">
+        {mods}
+    </ul>
+    <div class="nexus_cta" data-reveal>
+      <a class="btn btn-primary btn-lg" href="nexus.html">Explore NEXUS</a>
+      <a class="btn btn-ghost btn-lg" href="contact.html">Request a demo</a>
+    </div>
+  </div>
+</section>"""
+
+
+def nexus_page():
+    mod_cards = "\n        ".join(
+        f'<article class="nx_card" data-reveal><span class="nx_code">{c}</span><h3>{html.escape(t)}</h3><p>{html.escape(d)}</p></article>'
+        for t, c, d in NEXUS_MODULES)
+    body = subhero(
+        "NEXUS · Compliance Platform",
+        "SecureVisa NEXUS — your UAE compliance, in one platform",
+        "NEXUS unifies regulator mapping, licence tracking, AML/KYC, cybersecurity assurance, and audit-ready evidence into a single supervised workspace, so regulated teams always know exactly where they stand.",
+        [("index.html", "Home"), ("services.html", "Services"), ("", "NEXUS")],
+        [("6 / 6", "Regulators mapped"), ("1", "Source of truth")],
+        primary=("contact.html", "Request a NEXUS demo"),
+        bg="assets/media/nexus-hero.jpg",
+    ) + f"""
+<section class="section_pad">
+  <div class="container-large split">
+    <div class="prose" data-reveal>
+      <span class="eyebrow">What NEXUS is</span>
+      <h2>The regulatory command center, productized</h2>
+      <p>Most regulated businesses run compliance across spreadsheets, shared drives, and email threads. NEXUS replaces that with one workspace where every regulator, control, and document lives together and stays in sync.</p>
+      <p>It is the same operating model SecureVisa uses to take a business model from first assessment to a regulator-ready application — now visible to your team in real time.</p>
+      <ul class="check_list">
+        <li>A single, supervised view across six UAE regulators</li>
+        <li>Live licence-pathway tracking with clear next steps</li>
+        <li>AML/KYC and cybersecurity controls in one place</li>
+        <li>Versioned, audit-ready evidence on demand</li>
+      </ul>
+      <div style="margin-top:26px"><a class="btn btn-primary btn-lg" href="contact.html">Request a NEXUS demo</a></div>
+    </div>
+    <div class="nexus_visual" data-reveal>{command_center()}</div>
+  </div>
+</section>
+
+<section class="section_pad section_pad--alt">
+  <div class="container-large">
+    <header class="section_head"><span class="eyebrow">Inside the platform</span><h2>Six modules, one source of truth</h2>
+      <p>Each module is built around what UAE regulators actually expect — and designed to be maintained long after the licence is granted.</p></header>
+    <div class="nexus_grid">
+        {mod_cards}
+    </div>
+  </div>
+</section>
+{process_section()}
+{home_ecosystem()}
+{faq_block(FAQS[4:7], heading="NEXUS platform FAQs")}
+{final_cta()}"""
+    return write("nexus.html", "NEXUS Compliance Platform | SecureVisa Group",
+                 "SecureVisa NEXUS is a UAE regulatory compliance platform that unifies regulator mapping, licence tracking, AML/KYC, cybersecurity assurance, and audit-ready evidence across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE.",
+                 body, active="nexus",
+                 breadcrumb=[("index.html", "Home"), ("services.html", "Services"), ("nexus.html", "NEXUS")])
+
+
 # ==========================================================================
 # SUB-PAGES
 # ==========================================================================
@@ -833,13 +940,16 @@ def simple_page(filename, active, pill, h1, sub, sections_html, crumb_name):
 
 def main():
     # ---- Home ----
-    home_body = (home_hero() + home_regulators() + home_ecosystem() + home_industries()
+    home_body = (home_hero() + home_regulators() + home_nexus() + home_ecosystem() + home_industries()
                  + process_section() + why_section() + case_section() + ebook_section()
                  + faq_block(FAQS) + final_cta())
     write("index.html",
           "UAE Licensing & Compliance Experts | VARA, SCA, DFSA, ADGM | SecureVisa Group",
           "SecureVisa Group helps crypto, fintech, Web3, tokenization, forex, gaming, and financial services companies secure UAE licensing and build audit-ready compliance across VARA, SCA, DFSA, ADGM, GCGRA, and CBUAE.",
           home_body, active="")
+
+    # ---- NEXUS platform page ----
+    nexus_page()
 
     # ---- Regulator detail pages ----
     for k in REG_ORDER:
